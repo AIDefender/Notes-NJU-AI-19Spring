@@ -1,4 +1,36 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<!-- TOC -->
+
+- [大学物理笔记](#大学物理笔记)
+    - [多普勒效应](#多普勒效应)
+    - [驻波(stationary wave)](#驻波stationary-wave)
+    - [第九章 &emsp; Relativistic Mechanics 相对论力学](#第九章-emsp-relativistic-mechanics-相对论力学)
+        - [9.1 &emsp;伽利略变换](#91-emsp伽利略变换)
+        - [9.2 &emsp;洛伦兹变换 Lorentz Transformation](#92-emsp洛伦兹变换-lorentz-transformation)
+        - [9.3 &emsp;时空图和孪生paradox](#93-emsp时空图和孪生paradox)
+        - [9.4 &emsp;相对论运动学](#94-emsp相对论运动学)
+        - [9.5 &emsp; 相对论动力学(Relativistic Dynamics)](#95-emsp-相对论动力学relativistic-dynamics)
+    - [期末考试大致内容](#期末考试大致内容)
+    - [Project Proposal](#project-proposal)
+    - [第十章 温度](#第十章-温度)
+        - [10.1 Equilibruim state](#101-equilibruim-state)
+        - [10.2 Thermal equilibruim and temperature](#102-thermal-equilibruim-and-temperature)
+        - [10.4 物态方程](#104-物态方程)
+    - [第十一章 热力学第一定律](#第十一章-热力学第一定律)
+        - [11.1 功,内能和热力学第一定律](#111-功内能和热力学第一定律)
+        - [11.3 热容和比热容(Heat capacity and specific heat capacity)](#113-热容和比热容heat-capacity-and-specific-heat-capacity)
+        - [11.4 Free expansion and internal energy of gas](#114-free-expansion-and-internal-energy-of-gas)
+        - [11.5 Adiabatic equation](#115-adiabatic-equation)
+        - [11.6 卡诺循环](#116-卡诺循环)
+    - [第十二章 热力学第二定律](#第十二章-热力学第二定律)
+        - [12.1 内容](#121-内容)
+        - [12.2 卡诺定理](#122-卡诺定理)
+        - [12.3 熵与熵原理](#123-熵与熵原理)
+        - [12.4 热力学势](#124-热力学势)
+
+<!-- /TOC -->
+
 # 大学物理笔记
 ## 多普勒效应
 
@@ -75,7 +107,7 @@ fixed hard boundary; from high spped to low speed
 由$(1)$式,令 $(u_1+u_2)_{x=0}=0$,得 $\phi=\pi$,即为在固定端的相差
 
 
-## 第9章 &emsp; Relativistic Mechanics 相对论力学
+## 第九章 &emsp; Relativistic Mechanics 相对论力学
 
 ### 9.1 &emsp;伽利略变换
 - 观测者:一套矫正好的时钟,可记录 $x,y,z,t$
@@ -312,13 +344,22 @@ $$
   - 若 $cp<<m_0c^2$,泰勒展开后得到牛顿力学.
 
 ## 期末考试大致内容
-- 相对论
-- 理想气体(或给定气体的状态方程) 等温膨胀,绝热等过程, 功和热等
-- 理想气体的性质: 速度,动能等
+- 相对论运动学: 速度的变换
+- 理想气体(或给定气体的状态方程) 等温膨胀,绝热等过程, 功和热, 内能等
+- 理想气体的性质: 速度,平均动能等
 - 过程中温度的变化,熵的变化
-- __亥姆霍兹自由能__, 求平衡态(可能有数学上求导等)
+- 过程中 __亥姆霍兹自由能变__, 求平衡态(可能有数学上求导等)
 - 比热容, 温度. 
 - 相变 三相点.
+
+## Project Proposal
+- structure
+  - Template
+  - Guideline
+- how and where
+- basics of thesis writing
+- deadline
+
 
 ## 第十章 温度
 ### 10.1 Equilibruim state
@@ -485,17 +526,185 @@ $$
 - 证明: 任意热机做功驱动可逆热机的逆过程, 反证法与热二矛盾
 
 ### 12.3 熵与熵原理
-- $Q_2<0$放热:
+- 熵的引入
+
+
+假设$Q_2<0$为放热:
 
 $$
     \begin{aligned}
         效率不大于卡诺热机:\eta_A &= 1+\frac{Q_2}{Q_1}\leq1-\frac{T_2}{T_1}\\
         \sum_{i=1}^2\frac{Q_i}{T_i} &\leq 0\\
         一般过程:  \sum_{i=1}^n\frac{Q_i}{T_i} &\leq 0 (系统与很多热源接触)\\
-        \oint\frac{dQ}{T} &\leq0,取等:可逆 \\
-        写作全微分: \frac{dQ}{T}&\equiv dS\\
-        S_B-S_A&=\int_A^B(\frac{dQ}{T})_R
+        \oint\frac{dQ}{T} &\leq0\\(取等:可逆过程,考虑&Q_i\to-Q_i )\\
+        (环路&积分)\\
+        写作全微分: \frac{\bar{d}Q}{T}&\equiv dS\\
+        S_B-S_A&=\int_A^B\Big(\frac{dQ}{T}\Big)_R
     \end{aligned}
 $$
-克劳修斯不等式的说明:
-考虑多热源与单一热源 $T_0$由多个卡诺机联合
+若环路中包含不可逆过程: 
+
+$$
+    \begin{aligned}
+      \displaystyle\oint\Big(\frac{dQ}{T}\Big)&<0\\
+        \int_A^B\Big(\frac{dQ}{T}\Big)_{IR}+\int_A^B\Big(\frac{dQ}{T}\Big)_{R} &<0 \\
+         \int_A^B\Big(\frac{dQ}{T}\Big)_{IR}-\int_B^A\Big(\frac{dQ}{T}\Big)_{R} &<0 \\
+         S_B-S_A&>\int_A^B\Big(\frac{dQ}{T}\Big)_{IR} \\
+         \int_A^BdS&> \int_A^B\Big(\frac{dQ}{T}\Big)_{IR}\\
+         dS&>\Big(\frac{dQ}{T}\Big)_{IR}
+    \end{aligned}
+$$
+- 熵原理: 任何过程: $dS\geq\dfrac{dQ}{T}$
+  - 绝热过程: $dQ=0$; 可逆: $dS=0$, isentropic 等熵过程
+  - 孤立系统: $dS\geq0$; 非平衡趋于平衡: 熵增加; 平衡态: 宏观特征不变,熵最大
+- 热二的另一种形式: The entropy of an isolated system never decreases.
+  - 从单一热源吸热的熵变: $\Delta S=\dfrac{\Delta Q}{T}=\dfrac{-Q}{T}<0$,矛盾!
+  - 两热源 $T_1>T_2$, $T_1$吸热, $T_2$放热: $\Delta S=\dfrac{Q}{T_1}-\dfrac{Q}{T_2}<0$, 矛盾!
+
+
+- 克劳修斯不等式的证明:
+考虑多热源与单一热源 $T_0$由多个卡诺机联合:
+  - 系统作循环过程,分别与热源 $T_i$交换 $Q_i$的热量
+  - $T_0\to T_i$之间加上卡诺热机
+  - $T_0\to Q_{0i}$
+  - Carnot engines: $\dfrac{Q_{0i}}{T_0}=\dfrac{Q_i}{T_i}$
+  - 对整个辅助系统: $T_i$,系统,热机不变, 热源 $T_0$ 放热,对外做功. 第一定律: $\sum\limits_{n=1}^n Q_{0i}=\sum\limits_{n=1}^n W_i$
+  - 第二定律: 没有真正做功 $\sum\limits_{n=1}^n Q_{0i}=T_0 \sum\limits_{n=1}^n\dfrac{Q_i}{T_i}=\sum\limits_{n=1}^n W_i\leq0$
+
+- 求熵变
+  - 理想气体
+
+$$
+    \begin{aligned}
+        dS &= \frac{1}{T}(dU+pdV)(第一定律)\\
+         &= C_V\frac{dT}{T}+nR\frac{dV}{V}(第二类曲线积分)\\
+        S_f-S_i &= C_vln\frac{T_f}{T_i}+nRln\frac{V_f}{V_i}\\
+        S &= C_vlnT+nRlnV+S_0\\
+        状态函数: S(T,V) &= C_vlnT+nRlnV+S_0\\
+    \end{aligned}
+$$
+- - - Free expansion from $V\to2V(T=const)$:用熵作为状态函数来求: $\Delta S=nRln2>0$, irreversible
+  - 热库reservior $\Delta S=\displaystyle\int\dfrac{dQ}{T}=\dfrac{\Delta Q}{T}$吸热熵增,放热熵减
+  - 由准静态过程连接的状态: $\Delta S=\displaystyle\int_i^f\dfrac{dQ}{T},dQ=C_pdT\ /\ C_VdT$
+  - 由不可逆过程联系的: 找到相应的可逆过程(如不可逆的自由膨胀转化为等温过程) $\Delta S=\dfrac{1}{T}\int pdV=nRln\dfrac{V_f}{V_i}$
+  - 混合: $\Delta S=\displaystyle\int_{T_1}^{T_f}\frac{m_1c_1dT}{T}+\int_{T_2}^{T_f}\frac{m_2c_2dT}{T}$
+     - 吉布斯佯谬: 相同气体混合
+
+- 再探功与热
+  - 做功: 有广义距离: 电热丝,搅拌,微波炉等; 
+  - 但这些功只能转化为热,熵也就增加了$\Rightarrow$耗散功; 只要有耗散,就不可逆
+- 熵的微观解释: $S=k_BlnW, W$: 微观状态数
+  - 自由膨胀到两倍体积: $N$个粒子, $W=2^NW_0,\ \Delta S=k_BNln2$
+  - 熵: 广延量: 微观状态用乘法原理计算, $lnW$可加
+  - 习题 $(12.9)$:棋盘密度最大:平衡状态
+
+
+### 12.4 热力学势
+- 内能的计算
+$$
+    \begin{aligned}
+        dQ &= TdS\\
+        dU &= TdS-pdV+\mu dn\\
+        &(fundamental\ equation\ of\ thermodynamics)\\
+        &(\mu dn代表与外界的物质交换,\ \mu指化学势)\\
+        \big(\dfrac{\partial U}{\partial S}\big)_{V,n} &= T,
+        \big(\dfrac{\partial U}{\partial V}\big)_{S,n} = -p,
+        \big(\dfrac{\partial U}{\partial n}\big)_{S,V} =\mu\\
+        U是广延量:&\\
+        &U(\lambda S,\lambda V, \lambda n)=\lambda U(S,V,n)\\
+        两边对\lambda求导数:&\\
+        &\big(\dfrac{\partial U}{\partial (\lambda S)}\big)S+\big(\dfrac{\partial U}{\partial (\lambda V)}\big)+\big(\dfrac{\partial U}{\partial (\lambda n)}\big)_n=U\\
+        令\lambda=1:&\\
+        &U=TS-pV+\mu n
+
+    \end{aligned}
+$$
+欧拉齐次函数定理:设 $f(x_1,x_2,\cdots,x_n)$是$k$次函数,
+$$
+    \begin{aligned}
+        f(\lambda x_1,\lambda x_2,\cdots,\lambda x_n) &= \lambda^kf(x_1,x_2,\cdots,x_n)\\
+        \sum\limits_{n=1}^n \frac{\partial f}{\partial(\lambda x_i)}\frac{\partial(\lambda x_i)}{\partial \lambda} &=k\lambda^{k-1}f(x_1,x_2,\cdots,x_n)\\
+        令\lambda=1,得&\\ \sum\limits_{n=1}^n \frac{\partial f}{\partial x_i}x_i&=kf(x_1,x_2,\cdots,x_n) \\
+    \end{aligned}
+$$
+- 其他热力学势的引入
+$$
+    \begin{aligned}
+        dU &= TdS-pdV-Vdp+Vdp+\mu dn\\
+        d(U+pV) &= TdS+Vdp+\mu dn\equiv dH\\&(\sim reaction\ heat, enthopy)\\
+        % &= \\
+        % &= \\
+        dU &= TdS-pdV+\mu dn-TdS-SdT\\
+        d(U-TS) &= -SdT-pdV+\mu dn\equiv dF\\&(\sim useful\ work,\ Helmholtz\ free\ energy)\\
+        d(U-TS+pV) &=-SdT+Vdp+\mu dn\equiv dG \\
+         &(Gibbs\ free\ energy) \\
+        G&=F+pV=H-TS(free\ enthopy)\\
+        F&=U-TS
+    \end{aligned}
+$$
+Legendre变换: 
+$$
+    \begin{aligned}
+        df &= udx+vdy,\ 是x与y的函数\\
+        g &= f-ux\\
+        dg &= df-udx-xdu\\
+         &= udx+vdy-udx-xdu\\
+         &=-xdu+vdy, 是u与y的函数
+    \end{aligned}
+$$
+- - 化学势的求法: $\mu= \big(\dfrac{\partial G}{\partial n}\big)_{T,p}$,摩尔吉布斯自由能
+
+$$
+    \begin{aligned}
+        G &= \big(\dfrac{\partial G}{\partial n}\big)_{T,p}n=\mu n\\
+        dG &= nd\mu+\mu dn\\
+        nd\mu &=-SdT+Vdp \\
+        d\mu &= -S_mdT+V_mdp\\
+        &(S_m:摩尔熵,V_m:摩尔体积)\\
+    \end{aligned}
+$$
+- 麦克斯韦关系
+
+$$
+    \begin{aligned}
+    U(S,V,n)&=TS-pV+\mu n\\
+        \frac{\partial}{\partial p}(\frac{\partial G}{\partial T}) &=\frac{\partial}{\partial T}(\frac{\partial G}{\partial p})=\frac{\partial^2G}{\partial T\partial p} \\
+        -\big(\dfrac{\partial S}{\partial p}\big)_{T,n} &= \big(\dfrac{\partial V}{\partial T}\big)_{p,n}\\
+        &(也可从全微分理解)\\
+        dU &= TdS-pdV\\
+         &=T\Big[\big(\dfrac{\partial S}{\partial T}\big)_VdT+\big(\dfrac{\partial S}{\partial V}\big)_TdV-pdV\Big] \\
+         由dF=-SdT-pdV,结合&麦克斯韦关系:\\
+         &=T\Big[\big(\dfrac{\partial S}{\partial T}\big)_VdT+\big(\dfrac{\partial p}{\partial T}\big)_VdV-pdV\Big] \\
+         考虑C_V=T \big(\dfrac{\partial S}{\partial T}\big)_V:&\\
+         &=C_VdT+T\big(\dfrac{\partial p}{\partial T}\big)_VdV-pdV\\
+         \big(\dfrac{\partial U}{\partial V}\big)_T&=T \big(\dfrac{\partial p}{\partial T}\big)_V-p
+    \end{aligned}
+$$
+- Criteria of thermodynamics equilibrium
+
+$$
+    \begin{aligned}
+         \Delta S_t&=\Delta S+\Delta S_0=\Delta S-\dfrac{\Delta Q}{T_0}\\ &where\ Q\ is\ released\ to\ the\ system \\
+         &=\Delta S-\frac{\Delta U-\Delta W-\mu\Delta n}{T_0}\geq0 \\
+        \Delta U &\leq T_0\Delta S+\Delta W+\mu \Delta n \\
+        (\Delta U)_{S,V,n}&\leq0\\
+        \Delta F &= \Delta(U-TS)\leq -S\Delta T-p\Delta V+\mu\Delta n\\
+        (\Delta F)_{T,V,n}&\leq0\\
+        \Delta G&=\Delta(F=pV)\leq -S\Delta T+V\Delta p+\mu\Delta n\\
+        (\Delta G)_{T,p,n}&\leq0
+    \end{aligned}
+$$
+- 热力学势的物理意义
+  - $(\Delta H)_p=\Delta U+p\Delta V=\Delta Q$,化学反应中等压过程的反应热. $\Delta H>0$: endothermic 吸热; $\Delta H<0$: exothermic 放热
+  - 等温最大功与亥姆霍兹自由能
+
+$$
+    \begin{aligned}
+        \Delta S_t &= \Delta S+\Delta S_r\\
+         &= \Delta S-\frac{\Delta Q}{T_0}\geq0\\
+         \Delta Q&=\Delta U-\Delta W \\
+         \Delta W&\geq\Delta U-T_0\Delta S =\Delta F\\
+         \Delta W_{对外}=-\Delta W&\leq-\Delta F
+    \end{aligned}
+$$
+- - 额外功与吉布斯自由能
