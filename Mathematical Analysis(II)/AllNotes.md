@@ -18,6 +18,7 @@
             - [7.1.3 一般级数](#713-一般级数)
         - [7.2 函数项级数](#72-函数项级数)
             - [7.2.1 函数列的一致收敛性](#721-函数列的一致收敛性)
+            - [7.2.2 函数项级数](#722-函数项级数)
     - [第四章 常微分方程](#第四章-常微分方程)
         - [4.1 可分离变量的微分方程](#41-可分离变量的微分方程)
         - [4.4 一阶线性微分方程](#44-一阶线性微分方程)
@@ -485,7 +486,74 @@ $$
 ### 7.2 函数项级数
 #### 7.2.1 函数列的一致收敛性
 - Intuition: 求极限与求积分,求导数能不能交换次序
-- 设函数列 $f_1(x),f_2(x),\cdots,f_n(x),\cdots,x\in I$. 如果 $\forall x_0\in I, \lim\limits_{n \to\infty}f_n(x_0)=f(x)$, 则称 $\{f_n\}$收敛于 $f$.
+- 设函数列 $f_1(x),f_2(x),\cdots,f_n(x),\cdots,x\in I$. 如果 $\forall x_0\in D, \lim\limits_{n \to\infty}f_n(x_0)=f(x)$, 则称 $\{f_n\}$在$D$上收敛于 $f$. 若 $D$ 包含所有收敛点,则称其为函数列的收敛域
+
+$\forall \epsilon>0, \exist N=N(\epsilon,x)>0, \forall n>N,|f_n(x)-f(x)|<\epsilon$ (注意与不同$x$取值有关)
+
+
+eg1: 求 $f_n(x)=x^n$的收敛域
+
+sol1: $|x|<1: f_n(x)\to0,n\to\infty; x=1:收敛; x=-1:不收敛; |x|>1: 发散$.故收敛域为 $(-1,1]$
+- 讨论: $f_n(x)$每一项都连续,可导,可积....,极限是否有相应的性质
+
+<br>
+
+- 一致收敛性$f_n(x)\rightrightarrows f(x)$: 设函数列 $f_1(x),f_2(x),\cdots,f_n(x),\cdots,x\in D$,$f_n(x)\rightrightarrows f(x)\Leftrightarrow\forall \epsilon>0, \exist N=N(\epsilon)>0, \forall n>N,|f_n(x)-f(x)|<\epsilon, \forall x\in D$
+
+- 反: $\exist \epsilon>0, \forall N, n>N时,\exist x_n ,|f_n(x_n)-f(x_n)|\geq\epsilon$
+
+eg2: 证明 $f_n(x)=x^n$非一致收敛
+
+sol2:
+$$
+    |f_n(x)-f(x)|=|x^n|,let\ x_n\ be\ (1-\frac{1}{n})^n\\
+    |f_n(x)-f(x)|=1-\frac{1}{n}\geq\frac{1}{2}.
+    
+$$
+
+- 几何意义: $n>N$时, $y=f_n(x)$被限制在一个小区间之内
+- Cauchy判别法: $f_n(x)\rightrightarrows f(x)\Leftrightarrow\forall \epsilon>0, \exist N=N(\epsilon)>0, \forall n,m>N,|f_n(x)-f_m(x)|<\epsilon,\forall x\in D$
+- 余项判别法:  $D上,f_n(x)\rightrightarrows f(x)\Leftrightarrow \lim\limits_{n \to\infty}\sup\limits_{x\in D}|f_n(x)-f(x)|=0$
+
+eg3: $f_n(x)=nxe^{-nx^2}$
+
+sol3:
+$$
+    f(x)=0.\\
+    \sup\limits_{x\in D}f_n(x)=\frac{nx}{e^{nx^2}},求导求最大值=\frac{n}{\sqrt{2n}}e^{-\frac{1}{2}}\to\infty\not=0.
+$$
+故不一致收敛
+
+<br>
+
+- 性质1: $D上,f_n(x)\rightrightarrows f(x) \Rightarrow \lim\limits_{x \to x_0} \lim\limits_{n \to\infty}f_n(x)=\lim\limits_{n \to\infty}\lim\limits_{x \to x_0}f_n(x)=\lim\limits_{x \to x_0}f(x)$
+- 性质2: $D上,f_n(x)\rightrightarrows f(x) \Rightarrow \forall n\geq1,f_n(x)$连续,则 $f(x)$连续.
+- 性质3: $D上,f_n(x)\rightrightarrows f(x) \Rightarrow \forall n\geq1,f_n(x)$连续,则 $f(x)$可积,且
+
+$$
+    \int_a^b \lim\limits_{n \to\infty}f_n(x)=\lim\limits_{n \to\infty}\int_a^bf_n(x)
+$$
+- 性质4: $f_n(x)在D上可导,f'_n(x)\rightrightarrows f'(x) \Rightarrow \{f_n(x)\}$的极限函数可导,且
+
+$$
+    \frac{d}{dx}\lim\limits_{n \to\infty}f_n(x)=\lim\limits_{n \to\infty}\frac{d}{dx}f_n(x)
+$$
+
+eg4:验证性质: 
+
+$$
+f_n(x)=\dfrac{2x+n}{x+n},x\in[0,b]\\
+f_n(x)=x-\frac{x^n}{n}, x\in[0,1]
+$$
+sol4:
+
+1. 用余项 
+
+#### 7.2.2 函数项级数 
+- $\sum\limits_{n=1}^\infty u_n(x)$. 研究部分和函数 $S_n(x)= \sum\limits_{k=1}^n u_k(x)$, 构成函数列 $S_1(x),S_2(x),\cdots,S_n(x),\cdots$. $S_n(x_0)$收敛,称 $\sum\limits_{n=1}^\infty u_n(x)$在 $x=x_0$处收敛. 在集合上收敛,收敛域类似定义.
+- 和函数 $\sum\limits_{n=1}^\infty u_n(x)=S(x)=$ $\lim\limits_{n \to\infty}S_n(x)$  
+
+eg1: $\sum\limits_{n=1}^\infty x^n$的收敛域
 
 eg1: 求 $f_n(x)=x^n$的收敛域
 

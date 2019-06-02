@@ -2,32 +2,34 @@
 
 <!-- TOC -->
 
-- [大学物理笔记](#大学物理笔记)
-    - [多普勒效应](#多普勒效应)
-    - [驻波(stationary wave)](#驻波stationary-wave)
-    - [第九章 &emsp; Relativistic Mechanics 相对论力学](#第九章-emsp-relativistic-mechanics-相对论力学)
-        - [9.1 &emsp;伽利略变换](#91-emsp伽利略变换)
-        - [9.2 &emsp;洛伦兹变换 Lorentz Transformation](#92-emsp洛伦兹变换-lorentz-transformation)
-        - [9.3 &emsp;时空图和孪生paradox](#93-emsp时空图和孪生paradox)
-        - [9.4 &emsp;相对论运动学](#94-emsp相对论运动学)
-        - [9.5 &emsp; 相对论动力学(Relativistic Dynamics)](#95-emsp-相对论动力学relativistic-dynamics)
-    - [期末考试大致内容](#期末考试大致内容)
-    - [Project Proposal](#project-proposal)
-    - [第十章 温度](#第十章-温度)
-        - [10.1 Equilibruim state](#101-equilibruim-state)
-        - [10.2 Thermal equilibruim and temperature](#102-thermal-equilibruim-and-temperature)
-        - [10.4 物态方程](#104-物态方程)
-    - [第十一章 热力学第一定律](#第十一章-热力学第一定律)
-        - [11.1 功,内能和热力学第一定律](#111-功内能和热力学第一定律)
-        - [11.3 热容和比热容(Heat capacity and specific heat capacity)](#113-热容和比热容heat-capacity-and-specific-heat-capacity)
-        - [11.4 Free expansion and internal energy of gas](#114-free-expansion-and-internal-energy-of-gas)
-        - [11.5 Adiabatic equation](#115-adiabatic-equation)
-        - [11.6 卡诺循环](#116-卡诺循环)
-    - [第十二章 热力学第二定律](#第十二章-热力学第二定律)
-        - [12.1 内容](#121-内容)
-        - [12.2 卡诺定理](#122-卡诺定理)
-        - [12.3 熵与熵原理](#123-熵与熵原理)
-        - [12.4 热力学势](#124-热力学势)
+- [大学物理笔记](#%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E7%AC%94%E8%AE%B0)
+  - [多普勒效应](#%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94)
+  - [驻波(stationary wave)](#%E9%A9%BB%E6%B3%A2stationary-wave)
+  - [第九章   Relativistic Mechanics 相对论力学](#%E7%AC%AC%E4%B9%9D%E7%AB%A0-relativistic-mechanics-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E5%8A%9B%E5%AD%A6)
+    - [9.1  伽利略变换](#91-%E4%BC%BD%E5%88%A9%E7%95%A5%E5%8F%98%E6%8D%A2)
+    - [9.2  洛伦兹变换 Lorentz Transformation](#92-%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8F%98%E6%8D%A2-lorentz-transformation)
+    - [9.3  时空图和孪生paradox](#93-%E6%97%B6%E7%A9%BA%E5%9B%BE%E5%92%8C%E5%AD%AA%E7%94%9Fparadox)
+    - [9.4  相对论运动学](#94-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%90%E5%8A%A8%E5%AD%A6)
+    - [9.5   相对论动力学(Relativistic Dynamics)](#95-%E7%9B%B8%E5%AF%B9%E8%AE%BA%E5%8A%A8%E5%8A%9B%E5%AD%A6relativistic-dynamics)
+  - [期末考试大致内容](#%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E5%A4%A7%E8%87%B4%E5%86%85%E5%AE%B9)
+  - [Project Proposal](#project-proposal)
+  - [第十章 温度](#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E6%B8%A9%E5%BA%A6)
+    - [10.1 Equilibruim state](#101-equilibruim-state)
+    - [10.2 Thermal equilibruim and temperature](#102-thermal-equilibruim-and-temperature)
+    - [10.4 物态方程](#104-%E7%89%A9%E6%80%81%E6%96%B9%E7%A8%8B)
+  - [第十一章 热力学第一定律](#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B)
+    - [11.1 功,内能和热力学第一定律](#111-%E5%8A%9F%E5%86%85%E8%83%BD%E5%92%8C%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B)
+    - [11.3 热容和比热容(Heat capacity and specific heat capacity)](#113-%E7%83%AD%E5%AE%B9%E5%92%8C%E6%AF%94%E7%83%AD%E5%AE%B9heat-capacity-and-specific-heat-capacity)
+    - [11.4 Free expansion and internal energy of gas](#114-free-expansion-and-internal-energy-of-gas)
+    - [11.5 Adiabatic equation](#115-adiabatic-equation)
+    - [11.6 卡诺循环](#116-%E5%8D%A1%E8%AF%BA%E5%BE%AA%E7%8E%AF)
+  - [第十二章 热力学第二定律](#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B)
+    - [12.1 内容](#121-%E5%86%85%E5%AE%B9)
+    - [12.2 卡诺定理](#122-%E5%8D%A1%E8%AF%BA%E5%AE%9A%E7%90%86)
+    - [12.3 熵与熵原理](#123-%E7%86%B5%E4%B8%8E%E7%86%B5%E5%8E%9F%E7%90%86)
+    - [12.4 热力学势](#124-%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%8A%BF)
+  - [第十三章 理想气体的微观模型](#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E5%BE%AE%E8%A7%82%E6%A8%A1%E5%9E%8B)
+    - [13.1 理想气体](#131-%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93)
 
 <!-- /TOC -->
 
@@ -708,3 +710,11 @@ $$
     \end{aligned}
 $$
 - - 额外功与吉布斯自由能
+
+## 第十三章 理想气体的微观模型
+Microscopic Model for Ideal gas
+
+### 13.1 理想气体 
+- Microscopic description
+  - It contains of $N$ identical molecules
+  - The molecules obey 
