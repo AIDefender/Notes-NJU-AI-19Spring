@@ -30,6 +30,7 @@
     - [12.4 热力学势](#124-%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%8A%BF)
   - [第十三章 理想气体的微观模型](#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E5%BE%AE%E8%A7%82%E6%A8%A1%E5%9E%8B)
     - [13.1 理想气体](#131-%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93)
+    - [13.2 Equilibrium distributions](#132-equilibrium-distributions)
 
 <!-- /TOC -->
 
@@ -699,17 +700,30 @@ $$
 - 热力学势的物理意义
   - $(\Delta H)_p=\Delta U+p\Delta V=\Delta Q$,化学反应中等压过程的反应热. $\Delta H>0$: endothermic 吸热; $\Delta H<0$: exothermic 放热
   - 等温最大功与亥姆霍兹自由能
-
+设想系统与reservoir $T_0$接触,这是等温过程
 $$
     \begin{aligned}
-        \Delta S_t &= \Delta S+\Delta S_r\\
+        \Delta S_t &= \Delta S+\Delta S_{reservoir}\\
+        (&热源损失\Delta Q的热量)\\
          &= \Delta S-\frac{\Delta Q}{T_0}\geq0\\
-         \Delta Q&=\Delta U-\Delta W \\
-         \Delta W&\geq\Delta U-T_0\Delta S =\Delta F\\
-         \Delta W_{对外}=-\Delta W&\leq-\Delta F
+         对系统:&\\
+         \Delta Q&=\Delta U-\Delta W_{to\ system} \\
+         \Delta W_{to\ system}&\geq\Delta U-T_0\Delta S =\Delta F\\
+         \Delta W_{by\ system}&=-\Delta W\leq-\Delta F
     \end{aligned}
 $$
 - - 额外功与吉布斯自由能
+
+等温等压过程/ isothermal isobaric: 
+$$
+    \begin{aligned}
+        \Delta W &= -p\Delta V+\Delta W_{other}(non-expansion\ work)\\
+        \Delta W &\geq \Delta U-T_0\Delta S\\
+        -\Delta W_{other} &\leq \Delta(U-TS+pV)\equiv -\Delta G \\
+    \end{aligned}
+$$
+
+- 平衡条件: 温度,压强,化学势
 
 ## 第十三章 理想气体的微观模型
 Microscopic Model for Ideal gas
@@ -717,4 +731,110 @@ Microscopic Model for Ideal gas
 ### 13.1 理想气体 
 - Microscopic description
   - It contains of $N$ identical molecules
-  - The molecules obey 
+  - The molecules obey Newton's law
+  - The average spacing $>> r$(相互作用不产生内能的改变)
+  - Collisions are elastic and are of negligible duration.
+- Microscopic meaning of **pressure**
+
+考虑粒子撞壁运动
+$$
+    \begin{aligned}
+        \Delta p_x &=p_f-p_i=-2mv_x \\
+        \Delta t &= \frac{2\ell}{v_x} 撞击频率\\
+        \bar{F} &=-\frac{\Delta p_x}{\Delta t}(the\ force\ on\ wall) \\
+         &= \frac{2mv_x}{\frac{2\ell}{v_x}}=\frac{mv_x^2}{\ell}\\
+         p=\frac{1}{\ell^2}\sum_{n=1}^N\bar{F}_n&=\frac{m}{\ell^3}(v_{x1}^2+v_{x2}^2+\cdots)\\
+         &=\frac{Nm}{\ell^3}\frac{(v_{x1}^2+v_{x2}^2+\cdots)}{N}\\&=\frac{Nm}{\ell^3}\bar{v_x^2}\\
+         &=\frac{Nm}{3V}\bar{v^2}(isotropic\ 各向同性)\\
+         &=\frac{1}{3}\rho\bar{v^2}
+    \end{aligned}
+$$
+定义方均根速率 $v_{rms}=\sqrt{\bar{v^2}}=\sqrt{\dfrac{3p}{\rho}}$
+- Microscopic interpretation of T and U 
+
+$$
+    \begin{aligned}
+        pV &= \frac{2}{3}N(\frac{1}{2}m\bar{v^2})\\
+        nRT &= \frac{2}{3}N(\frac{1}{2}m\bar{v^2})\\
+        \frac{1}{2}m\bar{v^2} &= \frac{3}{2}\frac{nR}{N}T=\frac{3}{2}\frac{R}{N_A}T=\frac{3}{2}k_BT\\
+        k_B: 玻尔兹曼常数\ &联系宏观温度与微观速度 \\
+        LHS:\ & 单个粒子内能\\
+    \end{aligned}
+$$
+- 理想气体定体积热容 $C_V$
+  - monatomic: 只有平动自由度 $U=(3\times\dfrac{1}{2}k_BT)N=\dfrac{3}{2}k_BNT=\dfrac{3}{2}nRT$, 对 $T$求导即得 $C_V$
+  - diatomic: 多两个转动自由度
+  - ployatomic: 多三个转动自由度
+
+### 13.2 Equilibrium distributions
+$$
+    \begin{aligned}
+        \bar{v^2} &= \frac{n_1v_1'^2+n_2v_2'^2+\cdots}{N}\\
+         &= \int v^2\frac{dn}{N}\\
+    \end{aligned}
+$$
+在引入的速度空间内 $dn$ is the number of modules in $v_x\to v_x+dv_x, y,z$亦然, i.e. $\dfrac{dn}{N}$ is the probability that one molecule near $v$. It's proportional to $dv_x$. Let us suppose 
+$$
+    \begin{aligned}
+        \frac{dn(v_x,v_y,v_z)}{N} &=f(v_x)dv_xf(v_y)dv_yf(v_z)dv_z \\
+         速度各向同,与方向无关:&\\f(v_x)f(v_y)f(v_z)&=\phi(v^2)=\phi(v_x^2+v_y^2+v_z^2) \\Simplest\ solution:&\\
+        f(v_x)&=Cexp(-\frac{v_x^2}{\alpha^2}) \\
+        probability\ satisfies\ n&ormalization:\\
+         1&=\int\frac{dn}{N} \\
+         &=\int(f(v_x)dv_x)^3\\
+         &= C\int exp(-\frac{v_x^2}{\alpha ^2})dv_x\\
+        C&=\frac{1}{\displaystyle\int_{-\infty}^{\infty}exp(-\frac{v_x^2}{\alpha ^2})dv_x}\\
+        &=\frac{1}{\alpha\displaystyle\int_{-\infty}^{\infty}exp(-\frac{v_x^2}{\alpha ^2})d\frac{v_x}{\alpha}}\\
+        &=\frac{1}{\alpha\sqrt{\pi}}
+    \end{aligned}
+$$
+于是
+$$
+    \begin{aligned}
+        \frac{dn(v_x,v_y,v_z)}{N}  &= (\frac{1}{\alpha\sqrt{\pi}})^3exp\Big[-\frac{v_x^2+v_y^2+v_z^2}{\alpha^2}\Big]\\
+         &=(\frac{1}{\alpha\sqrt{\pi}})e^{-\frac{v_x^2}{\alpha^2}}dv_x(\frac{1}{\alpha\sqrt{\pi}})e^{-\frac{v_y^2}{\alpha^2}}dv_y(\frac{1}{\alpha\sqrt{\pi}})e^{-\frac{v_z^2}{\alpha^2}}dv_z \\
+        \bar{v^2} &=\int(v_x^2+v_y^2+v_z^2)\frac{dn(v_x,v_y,v_z)}{N}  \\
+         &=3\int_{-\infty}^\infty v_x^2(\frac{1}{\alpha\sqrt{\pi}})e^{-\frac{v_x^2}{\alpha^2}}dv_x (v_x对dv_y积分得1)\\
+         &=3\times\frac{2\alpha^2}{\sqrt{\pi}}\int_0^\infty y^2e^{-y^2}dy\\
+         &=3\times\frac{2\alpha^2}{\sqrt{\pi}}\frac{1}{2}\Gamma(\frac{3}{2})=3\times\frac{2\alpha^2}{\sqrt{\pi}}\frac{1}{4}\Gamma(\frac{1}{2})=3\times\frac{2\alpha^2}{\sqrt{\pi}}\frac{1}{4}\sqrt{\pi}\\
+         &=\frac{3}{2}\alpha^2\\
+         \alpha^2&=2k_BT/m\\
+
+    \end{aligned}
+$$
+从而有Maxwell velocity distribution:
+$$
+    \begin{aligned}
+         \frac{dn(v_x,v_y,v_z)}{N}  &= (\frac{m}{2\pi k_BT})^\frac{3}{2}exp\Big[-\frac{m(v_x^2+v_y^2+v_z^2)}{2k_BT}\Big]dv_xdv_ydv_z \\
+        dn(v_x,v_y,v_z)  &= n_0(\frac{m}{2\pi k_BT})^\frac{3}{2}exp\Big[-\frac{m(v_x^2+v_y^2+v_z^2)}{2k_BT}\Big]dv_xdv_ydv_z \\
+    \end{aligned}
+$$
+Maxwell speed distribution: 将速度空间的体积元换为速率空间的球壳
+
+
+$$
+    \begin{aligned}
+        dv_xdv_ydv_z&\to4\pi v^2dv\\
+        dn(v)  &= n_0(\frac{m}{2\pi k_BT})^\frac{3}{2}exp\Big[-\frac{\frac{1}{2}mv^2}{k_BT}\Big]4\pi v^2dv \\
+         &=f(v)dv \\
+        \frac{d}{dv}f(v) &= 0,知\\
+        v_m &= \sqrt{\frac{2k_BT}{m}}\\
+        Maxwellian\ can\ be\ written\ as\ :&\\
+        \frac{dn(v)}{N}&=4\pi(\frac{1}{\pi v_m^2})^{\frac{3}{2}}exp(-\frac{v^2}{v_m^2}) v^2dv
+    \end{aligned}
+$$
+
+
+The average speed
+- Gaussian intergral using Gamma function:
+$$
+    \begin{aligned}
+        I&=\int_0^{\infty}e^{-x^2}dx\\
+        \Gamma(v) &= \int_0^{\infty}e^{-t}t^{v-1}dt\\
+        I &= \int_0^{\infty}e^{-y}\frac{1}{2\sqrt{y}}dy\\
+         &= \frac{1}{2}\Gamma(\frac{1}{2})\\
+         &= \frac{\sqrt{\pi}}{2}\\
+         I_n&=\int_0^{\infty}x^ne^{-x^2}dx=\frac{1}{2}\Gamma(\frac{n+1}{2})
+    \end{aligned}
+$$
+

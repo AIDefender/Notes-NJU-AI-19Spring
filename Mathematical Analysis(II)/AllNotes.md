@@ -19,6 +19,8 @@
         - [7.2 函数项级数](#72-函数项级数)
             - [7.2.1 函数列的一致收敛性](#721-函数列的一致收敛性)
             - [7.2.2 函数项级数](#722-函数项级数)
+        - [7.3 幂级数](#73-幂级数)
+            - [函数的幂级数展开](#函数的幂级数展开)
     - [第四章 常微分方程](#第四章-常微分方程)
         - [4.1 可分离变量的微分方程](#41-可分离变量的微分方程)
         - [4.4 一阶线性微分方程](#44-一阶线性微分方程)
@@ -550,14 +552,135 @@ sol4:
 1. 用余项 
 
 #### 7.2.2 函数项级数 
-- $\sum\limits_{n=1}^\infty u_n(x)$. 研究部分和函数 $S_n(x)= \sum\limits_{k=1}^n u_k(x)$, 构成函数列 $S_1(x),S_2(x),\cdots,S_n(x),\cdots$. $S_n(x_0)$收敛,称 $\sum\limits_{n=1}^\infty u_n(x)$在 $x=x_0$处收敛. 在集合上收敛,收敛域类似定义.
+- $\sum\limits_{n=1}^\infty u_n(x)$. 研究部分和函数 $S_n(x)= \sum\limits_{k=1}^n u_k(x)$, 构成函数列 $S_1(x),S_2(x),\cdots,S_n(x),\cdots$. $S_n(x_0)$收敛,称 $\sum\limits_{n=1}^\infty u_n(x)$在 $x=x_0$处收敛. 在集合上收敛,收敛域类似定义.若部分和函数一致收敛,则级数 $\sum\limits_{n=1}^\infty u_n(x)$一致收敛.
 - 和函数 $\sum\limits_{n=1}^\infty u_n(x)=S(x)=$ $\lim\limits_{n \to\infty}S_n(x)$  
 
 eg1: $\sum\limits_{n=1}^\infty x^n$的收敛域
 
-eg1: 求 $f_n(x)=x^n$的收敛域
+- 柯西判别法: 同7.1.1; 必要条件: 通项 $u_n(x)\rightrightarrows0$
+- 余项判别法: 同7.1.1;
 
-sol1: $|x|<1: f_n(x)\to0,n\to\infty; x=1:收敛; x=-1:不收敛; |x|>1: 发散$.故收敛域为 $(-1,1]$
+eg2: $\sum\limits_{n=1}^\infty x^n$在 $x\in(-1,1)$上的一致收敛性
+
+sol2: 当出现 $\sup\limits_{x\in(-1,1)}\dfrac{x^{n+1}}{1-x}$时,无需求导得最小值,只需令 $x=\dfrac{n}{n+1},\sup\limits_{x\in(-1,1)}\dfrac{x^{n+1}}{1-x}\geq \dfrac{(\frac{n}{n+1})^{n+1}}{\frac{1}{n+1}}=(n+1)(1-\dfrac{1}{n+1})^{n+1}\to\infty$,故不一致收敛
+
+- 维尔斯特拉斯判别法: 若 $\sum\limits_{n=1}^\infty M_n$收敛,且 $\forall n\in \mathbb{N}_+\forall x\in D,|u_n(x)|\leq M_n$,则 $\sum\limits_{n=1}^\infty u_n(x)$一致收敛
+
+Intuition: 将函数的上界换为数列
+
+<br>
+
+- 性质
+  - 连续性: 若 $u_n(x)$连续,则 $\sum\limits_{n=1}^\infty u_n(x)$连续
+  - 逐项可积:  若 $u_n(x)$连续,则 $\sum\limits_{n=1}^\infty u_n(x)$可积,且 $\displaystyle\int_0^x \sum\limits_{n=1}^\infty u_n(x)dx= \sum\limits_{n=1}^\infty \int_0^x u_n(x)dx$
+  - 逐项可导: $u_n(x)\in C^{(1)}, \sum\limits_{n=1}^\infty u'_n(x)$一致收敛,则 $S(x)$可导,且 $S'(x)= (\sum\limits_{n=1}^\infty u_n(x))'= \sum\limits_{n=1}^\infty u'_n(x)$
+  - 内闭一致收敛: 在区间内任意一个闭区间一致收敛,则上面的性质都可用
+
+eg3: $u_n(x)=\dfrac{1}{n^3}ln(1+n^2x^2)$. 证明: $\sum\limits_{n=1}^\infty u_n(x)$在 $[0,1]$一致收敛
+
+sol3:
+
+Weierstrass: $S_n(x)= \sum\limits_{k=1}^n \dfrac{1}{k^3}ln(1+x^2k^2)\leq\sum\limits_{k=1}^n \dfrac{1}{k^3}ln(1+k^2)$. 考虑 $M_n=\dfrac{1}{n^3}ln(1+n^2)$,易见原命题成立.
+
+同时, $u'_n(x)\leq\dfrac{1}{n^2}$,故 $\sum\limits_{n=1}^\infty u'_n(x)$一致收敛,可知 $S'(x)$
+
+eg4: 证明: $ln(1+x)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}+\cdots+(-1)^n\dfrac{x^n}{n}$
+
+sol4:
+
+恒成立: $1+x=1-x+x^2-x^3+\cdots+(-1)^{n+1}x^n+\cdots$
+
+两边积分: $\displaystyle\int_0^x \dfrac{1}{1+x}dx=\displaystyle\int_0^x1-x+x^2-x^3+\cdots+(-1)^{n+1}x^n+\cdots$,化为逐项积分易见.
+
+注意为何符合条件
+
+
+
+### 7.3 幂级数
+- $\sum\limits_{n=1}^\infty a_nx^n$
+- $Th(Abel):$
+  - $i)$ $\sum\limits_{n=1}^\infty a_nx^n$在 $x=x_0$处收敛,则 $\forall x. |x|<|x_0|,\sum\limits_{n=1}^\infty a_nx^n$收敛
+  - $ii)$ $\sum\limits_{n=1}^\infty a_nx^n$在 $x=x_0$处发散,则 $\forall x. |x|>|x_0|,\sum\limits_{n=1}^\infty a_nx^n$发散
+
+证明:
+
+(i) $\sum\limits_{n=1}^\infty a_nx^n$=$\sum\limits_{n=1}^\infty a_nx_0^n(\dfrac{x^n}{x_0^n})$. 由 $\sum\limits_{n=1}^\infty a_nx_0^n$收敛,知 $a_nx_0^n\leq M$有界,又 $(\dfrac{x}{x_0})^n<1$则易见收敛.
+
+(ii) 反证
+
+- 收敛半径$R$ :阻隔收敛与发散 关于原点对称
+
+- 幂级数的收敛性判别法
+  - 比式 $\rho= \lim\limits_{n \to\infty}|\dfrac{a_{n+1}}{a_n}|$
+    - $0<\rho<\infty: R=\dfrac{1}{\rho}$
+    - $\rho=0: R=\infty$
+    - $\rho=\infty: R=0$
+
+证明: 用正项级数的比式判别法
+
+$\lim\limits_{n \to\infty}|\dfrac{u_{n+1}}{u_n}|=|x| \lim\limits_{n \to\infty}|\dfrac{a_{n+1}}{a_n}|$,比较其与$1$的大小关系
+- - 根式 $\rho= \lim\limits_{n \to\infty}\sqrt[n]{|a_n|}$
+    - $0<\rho<\infty: R=\dfrac{1}{\rho}$
+    - $\rho=0: R=\infty$
+    - $\rho=\infty: R=0$
+
+eg1: 求 $\sum\limits_{n=1}^\infty \dfrac{x^n}{n^2}$的收敛域
+
+sol1: 直接用比式判别法,多一个分情况讨论
+
+eg2: $\sum\limits_{n=1}^\infty \dfrac{x^{2n}}{2^nn}$
+
+注意: Strling 公式
+
+$$
+    n!\approx\sqrt{2\pi n}(\frac{n}{e})^n
+$$
+
+<br>
+
+- 性质
+  - 和函数在 $(-R,R)$连续
+  - 若 $\sum\limits_{n=0}^\infty a_nx^n$在 $x=R/-R$收敛,则和函数 $S_n$在该点单边收敛
+  - 收敛半径内,和函数可逐项求导,求积分
+  - $\sum\limits_{n=0}^\infty a_nx^n$与 $\sum\limits_{n=1}^\infty a_nnx^{n-1}$及 $\sum\limits_{n=0}^\infty a_n\dfrac{1}{n+1}x^{n+1}$有相同的收敛半径
+
+证明: $\forall x\in (-R,R),\exist y\in(-R,R),|x|<|y|. \sum\limits_{n=0}^\infty a_nnx^{n-1}=\sum\limits_{n=0}^\infty a_ny_n\dfrac{n}{y}\dfrac{x^{n-1}}{y^{n-1}}\leq \sum\limits_{n=0}^\infty M\dfrac{n}{y}\dfrac{x^{n-1}}{y^{n-1}}$.这是由于$\sum\limits_{n=0}^\infty a_nx^n$收敛,通项有界.用比式判别法易证其收敛.
+- - $S(x)=\sum\limits_{n=0}^\infty a_nx^n$. $S(0)=a_0,S'(x)= \sum\limits_{n=0}^\infty na_nx^{n-1},S'(0)=a_1. a_n=\dfrac{S^{(n)}(0)}{n!}$
+
+eg3 求 $\sum\limits_{n=1}^\infty (-1)^nn^2x^n$
+
+sol1: 收敛半径: $(-1,1)$. 
+$$
+    \begin{aligned}
+         S(x)&=x\sum\limits_{n=1}^\infty (-1)^nnnx^{n-1}=xg(x) \\
+         \int_0^xg(t)dt&= \sum\limits_{n=1}^\infty (-1)^nnx^n=xf(x) \\
+        \int_0^xf(t)dt &=\frac{-x}{1+x} \\
+        求导,f(x) &=-\frac{1}{(1+x)^2},\int_0^xg(t)dt= -\frac{1}{x(1+x)^2}\\
+        g(x)&=\cdots,S(x)=xg(x)
+    \end{aligned}
+$$
+
+#### 函数的幂级数展开
+- Taylor级数 $f(x)=f(x_0)+f'(x_0)(x-x_0)+\cdots+f^{(n)}(x_0)\dfrac{(x-x_0)^n}{n!}$
+
+反例: 
+
+$$
+\begin{aligned}
+    f(x)&=e^{-\frac{1}{x^2}},x\not=0\\
+        &=0,x=0
+    
+\end{aligned}
+$$
+其求n阶导为0, $S(x)=0$.
+
+- Th: 若 $f(x)$在  $x=x_0$处有任意阶导数, 且对$|x-x_0|<r, \lim\limits_{n \to\infty}R_n(x)=0,$则 $\forall x\in(x_0-r,x_0+r),f(x)=   \sum\limits_{n=1}^\infty f^{(n)}(x_0)\dfrac{(x-x_0)^n}{n!}$
+
+余项的表达式: $R_n(x)=\dfrac{f^{(n+1)}(\xi)}{n!}x^{n+1}$    
+
+eg4 求 $f(x)=ln(1-x)$的幂级数展开
+
+sol4: 用求导等运算
 
 
 ## 第四章 常微分方程
