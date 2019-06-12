@@ -21,6 +21,7 @@
             - [7.2.2 函数项级数](#722-函数项级数)
         - [7.3 幂级数](#73-幂级数)
             - [函数的幂级数展开](#函数的幂级数展开)
+        - [7.4 傅里叶级数](#74-傅里叶级数)
     - [第四章 常微分方程](#第四章-常微分方程)
         - [4.1 可分离变量的微分方程](#41-可分离变量的微分方程)
         - [4.4 一阶线性微分方程](#44-一阶线性微分方程)
@@ -681,7 +682,54 @@ $$
 eg4 求 $f(x)=ln(1-x)$的幂级数展开
 
 sol4: 用求导等运算
+eg5: $ln\dfrac{1+x}{1-x}$
 
+sol5:
+$$
+    \begin{aligned}
+        ln(\frac{1+x}{1-x}) &= ln(1+x)-ln(1-x)\\
+         &= \sum_{n=1}^\infty(-1)^{n+1}\frac{x^n}{n}-\sum_{n=1}^\infty(-1)^{n+1}\frac{(-x)^n}{n}\\
+         &=\sum_{n=1}^\infty(-1)^{n+1}\frac{x^n}{n}+\sum_{n=1}^\infty\frac{x^n}{n} \\
+         &= 2\sum_{n=1}^\infty\frac{x^{2n-1}}{2n-1}\\
+    \end{aligned}
+$$
+
+eg6:求 $f(x)=\displaystyle\int_0^xe^{-t^2}dt$的 $n$阶导数
+
+$f(x)=\sum\limits_{n=1}^\infty \dfrac{(-1)^n}{n!}\dfrac{x^{2n+1}}{2n+1}=\sum\limits_{n=1}^\infty\dfrac{f^{(n)}(0)x^n}{n!}$
+
+比较系数,得 $f^{(2n)}(0)=0$,$f^{(2n+1)}(0)=\dfrac{(-1)^n(2n+1)!}{n!(2n+1)}$
+
+### 7.4 傅里叶级数
+- 若 $f(x)$以 $2\pi$为周期,则在傅里叶系数 $a_n,b_n$下,
+$$
+    \begin{aligned}
+        f(x) &\sim A_0+\sum\limits_{n=1}^\infty A_nsin(nx+\phi_n)\\
+     &= A_0+\sum\limits_{n=1}^\infty A_n(sin\phi_ncosnx+cos\phi_nsinnx)\\
+         &= \frac{a_0}{2}+\sum\limits_{n=1}^\infty a_ncosnx+b_nsinnx \ \ \ \ \ (1)\\
+    \end{aligned}
+$$
+- 收敛性:$\sum\limits_{n=1}^\infty |a_n|+|b_n|$收敛,则 $(1)$收敛且一致收敛
+- 正交性:若 $\phi(x),\psi(x)$在 $[a,b]$可积,且 $<\phi,\psi>=\displaystyle\int_a^b\phi(x)\psi(x)dx=0$,则称$\phi(x),\psi(x)$在$[a,b]$正交
+- 三角函数系 $1,sinx,cosx,\cdots,sinnx,cosnx$
+  - 周期为 $2\pi$
+  - 宛如正交基, $<a_i,a_j>=\pi\delta(i,j)$
+- 与 $f(x)$的联系
+  - $a_n=\dfrac{1}{\pi}\displaystyle\int_{-\pi}^\pi f(x)cosnxdx,n=0,1,2,\cdots$
+  - $b_n=\dfrac{1}{\pi}\displaystyle\int_{-\pi}^\pi f(x)sinnxdx,n=1,2,\cdots$
+
+证明: $(1)$两边积分.求 $a_n$:
+$$
+    \begin{aligned}
+         f(x)&= \frac{a_0}{2}+\sum\limits_{n=1}^\infty a_ncosnx+b_nsinnx \\
+         由正交性,一致收敛性:& \\
+        \int_{-\pi}^\pi f(x)cosnxdx &=a_n\int_{-\pi}^\pi cos^2nx=\pi a_n \\
+    \end{aligned}
+$$
+- 和函数收敛定理:若 $f(x)$以 $2\pi$为周期,且 $[-\pi,\pi]$按段光滑,则 $\forall x\in(-\infty,+\infty)$, 傅里叶级数收敛至 $\dfrac{f(x+0)+f(x-0)}{2}$
+- 按段光滑: $f(x)$在$[a,b]$满足:
+  - 除有限第一类间断点外, $f(x)$连续
+  - 除有限第一类间断点外, $f'(x)$存在.且若 $x_0$为不连续点,则 $f'_+(x_0),f'_-(x_0)$存在
 
 ## 第四章 常微分方程
 ### 4.1 可分离变量的微分方程

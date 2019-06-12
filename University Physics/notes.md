@@ -31,6 +31,11 @@
   - [第十三章 理想气体的微观模型](#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93%E7%9A%84%E5%BE%AE%E8%A7%82%E6%A8%A1%E5%9E%8B)
     - [13.1 理想气体](#131-%E7%90%86%E6%83%B3%E6%B0%94%E4%BD%93)
     - [13.2 Equilibrium distributions](#132-equilibrium-distributions)
+    - [13.3 Equipartition theorem](#133-equipartition-theorem)
+  - [第十四章 相变 Phase Transition](#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E7%9B%B8%E5%8F%98-phase-transition)
+    - [14.1 范德瓦尔斯方程](#141-%E8%8C%83%E5%BE%B7%E7%93%A6%E5%B0%94%E6%96%AF%E6%96%B9%E7%A8%8B)
+    - [14.2 Phase and Phase Diagrams](#142-phase-and-phase-diagrams)
+    - [14.3 克拉伯龙方程](#143-%E5%85%8B%E6%8B%89%E4%BC%AF%E9%BE%99%E6%96%B9%E7%A8%8B)
 
 <!-- /TOC -->
 
@@ -838,3 +843,61 @@ $$
     \end{aligned}
 $$
 
+### 13.3 Equipartition theorem
+## 第十四章 相变 Phase Transition
+### 14.1 范德瓦尔斯方程
+- $p=\dfrac{nRT}{V-nb}-a(\dfrac{n}{V})^2$.第二项:吸引力;第一项:最小体积(斥力).高温低密度:趋于理想气体
+- Critical point临界点.求临界状态:
+
+$$
+    \begin{aligned}
+        \big(\dfrac{\partial p}{\partial V}\big)_T &=0 \\
+        \big(\dfrac{\partial ^2p}{\partial V^2}\big)_T &=0 \\
+         求出p_C,V_C,T_C \\
+    \end{aligned}
+$$
+- $p-V$图的稳定性分析
+- 一摩尔物质isotherms: $dG=Vdp,g=\displaystyle\int vdp$
+- 确定临界点.$C-G$:气液共存
+
+$$
+    \begin{aligned}
+        0 &= g_G-g_C\\
+         &= \int_{p_C}^{p_G}v(p)dp\\
+         &= (\int_C^D+\int_D^E+\int_E^F+\int_F^G)v(p)dp\\
+         &= (\int_C^D-\int_E^D)-(\int_F^E-\int_F^G)v(p)dp\\
+         &= A_{CDEC}-A_{EFGE}\\
+         (Maxwell\ &equal\ area\ construction)
+    \end{aligned}
+$$
+- $v=xv_g+(1-x)v_\ell$,求摩尔分数
+
+### 14.2 Phase and Phase Diagrams
+- A:三相点 ; C:临界点: $p-V$图那条线的极大值点.临界温度以上,无法区分气体与液体,Supercritical fluid
+- 线:相平衡曲线
+
+### 14.3 克拉伯龙方程
+- 相平衡:化学势相等.共存曲线
+
+$$
+    \mu^I(T,p)=\mu^{II}(T,p)
+$$
+According to Gibbs-Duheim equation:
+$$
+    \begin{aligned}
+        d\mu^I &= d\mu^{II}\\
+        -S_m^IdT+V_m^Idp &= -S_m^{II}dT+V_m^{II}dp\\
+        \big(\dfrac{\partial p}{\partial T}\big)_{CO} &=\frac{S_m^I-S_m^{II}}{V_m^I-V_m^{II}} \\
+         &=\frac{T\Delta S_m}{T\Delta V_m}\\
+         \Delta G=\Delta H-T\Delta S=0&:\\
+         &=\frac{\Delta H_m}{T\Delta V_m}=\frac{\ell}{T\Delta V_m}(latent\ heat) \\
+    \end{aligned}
+$$
+汽化过程的斜率: $\dfrac{dp}{dT}=\dfrac{\ell_Vp}{RT^2}$
+- 沿冰线:
+$$
+    \begin{aligned}
+        \Delta T &= T-T_tr\\
+         &= \frac{T(V_{mw}-V_{mi})}{\ell_F}\Delta p\\
+    \end{aligned}
+$$
