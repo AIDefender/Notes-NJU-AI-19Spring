@@ -36,8 +36,19 @@
     - [14.1 范德瓦尔斯方程](#141-%E8%8C%83%E5%BE%B7%E7%93%A6%E5%B0%94%E6%96%AF%E6%96%B9%E7%A8%8B)
     - [14.2 Phase and Phase Diagrams](#142-phase-and-phase-diagrams)
     - [14.3 克拉伯龙方程](#143-%E5%85%8B%E6%8B%89%E4%BC%AF%E9%BE%99%E6%96%B9%E7%A8%8B)
+- [习题课](#%E4%B9%A0%E9%A2%98%E8%AF%BE)
+  - [9.3](#93)
+  - [9.16](#916)
+  - [11.9](#119)
+  - [12.8](#128)
+  - [12.12](#1212)
+  - [12.13](#1213)
+  - [12.11](#1211)
 
 <!-- /TOC -->
+<br>
+
+<br>
 
 # 大学物理笔记
 ## 多普勒效应
@@ -901,3 +912,155 @@ $$
          &= \frac{T(V_{mw}-V_{mi})}{\ell_F}\Delta p\\
     \end{aligned}
 $$
+<br>
+<br>
+
+# 习题课
+## 9.3
+- Known $x=0,x'=-200m$, to find $t$:
+$$
+    x'=\gamma(x-ut)
+$$
+或用尺缩
+- To find $t'$:
+$$
+    x=\gamma(x'+ut')
+$$
+## 9.16
+- Conservation of mass-energy:
+
+$$
+    m_{n_0}c^2=m_{p_0}c^2+m_ec^2+E_\nu
+$$
+- Conservation of 动量:
+
+$$
+    \begin{aligned}
+        p_e+p_\nu &= 0\\
+        E_\nu &= cp_\nu\\
+        E_e^2 &= p_e^2c^2+E_0^2\\
+        \frac{1}{c}\sqrt{E_e^2-E_0^2} &= \frac{E_\nu}{c}\\
+    \end{aligned}
+$$
+## 11.9
+$$
+    \begin{aligned}
+        \eta &= \frac{W}{\Delta Q_{BC}}\\
+         &= \frac{\Delta Q_{BC}-\Delta Q_{AD}}{\Delta Q_{BC}}\\
+         &=1-\frac{\Delta Q_{AD}}{\Delta Q_{BC}} \\
+         &=1-\frac{T_D-T_A}{T_C-T_B} \\
+    \end{aligned}
+$$
+
+## 12.8
+$$
+    \Delta S=(\int_{333K}^{T_f}+\int_{T_f}^{288})\frac{mcdT}{T}+\frac{\Delta Q_s}{T_s}
+$$
+
+## 12.12
+show that 
+$$
+    \big(\dfrac{\partial \mu}{\partial V_m}\big)_T=V_m \big(\dfrac{\partial p}{\partial V_m}\big)_T
+$$
+
+<br>
+
+$$
+    \begin{aligned}
+        d\mu &=-sdT+vdp \\
+        \big(\dfrac{\partial \mu}{\partial v}\big)_T &=\big(\dfrac{\partial \mu}{\partial p}\big)_T \big(\dfrac{\partial p}{\partial v}\big)_T=v \big(\dfrac{\partial p}{\partial v}\big)_T \\
+        or:&\\
+         d\mu&=-sdT+v[\big(\dfrac{\partial p}{\partial T}\big)_vdT+\big(\dfrac{\partial p}{\partial v}\big)_Tdv] \\
+         &= \\
+    \end{aligned}
+$$
+
+## 12.13 
+show that 
+$$
+    \begin{aligned}
+        TdS &= C_pdT-TV\alpha dp\\
+        TdS &= C_VdT+T\frac{\alpha}{\kappa}dV\\
+    \end{aligned}
+$$
+
+<br>
+
+
+$$
+    \begin{aligned}
+        dH &= TdS+Vdp\\
+         &= T \big(\dfrac{\partial S}{\partial T}\big)_pdT+[T \big(\dfrac{\partial S}{\partial p}\big)_T+V]dp\\
+        C_p &= \big(\dfrac{\partial H}{\partial T}\big)_p=T \big(\dfrac{\partial S}{\partial T}\big)_p\\
+        \big(\dfrac{\partial H}{\partial p}\big)_T &= T \big(\dfrac{\partial S}{\partial p}\big)_T+V=-T \big(\dfrac{\partial V}{\partial T}\big)_p+V\\
+    \end{aligned}
+$$
+Thus 
+$$
+    \begin{aligned}
+        TdS &= T \big(\dfrac{\partial S}{\partial T}\big)_pdT+T \big(\dfrac{\partial S}{\partial p}\big)_Tdp \\
+         &=C_pdT-T \big(\dfrac{\partial V}{\partial T}\big)_pdp \\
+         &=C_pdT-TV\alpha dp \\
+    \end{aligned}
+$$
+and 
+$$
+    \begin{aligned}
+        TdS &= T \big(\dfrac{\partial S}{\partial T}\big)_VdT+T \big(\dfrac{\partial S}{\partial V}\big)_TdV\\
+         &= C_VdT+T \big(\dfrac{\partial p}{\partial T}\big)_VdV\\
+         Cyclic\ chain\ rule&:\\
+         &= C_VdT-T \frac{\big(\dfrac{\partial V}{\partial T}\big)_p}{\big(\dfrac{\partial V}{\partial p}\big)_T}dV\\
+         &= C_VdT+T\frac{\alpha}{\kappa}dV\\
+    \end{aligned}
+$$
+
+## 12.11
+show that 
+$$
+    \begin{aligned}
+        \big(\dfrac{\partial C_V}{\partial V}\big)_T &=T \big(\dfrac{\partial ^2p}{\partial T^2}\big)_V \\
+        \big(\dfrac{\partial C_p}{\partial V}\big)_T &=T \big(\dfrac{\partial ^2V}{\partial T^2}\big)_p \\
+    \end{aligned}
+$$
+<br>
+
+$$
+    \begin{aligned}
+        \big(\dfrac{\partial C_V}{\partial V}\big)_T &=T \big(\dfrac{\partial \big(\dfrac{\partial S}{\partial T}\big)_V}{\partial V}\big)_T \\
+         &=T \big(\dfrac{\partial \big(\dfrac{\partial S}{\partial V}\big)_T}{\partial T}\big)_V \\
+        &=T \big(\dfrac{\partial \big(\dfrac{\partial p}{\partial T}\big)_V}{\partial T}\big)_V \\
+         &= T \big(\dfrac{\partial ^2p}{\partial T^2}\big)_V\\
+    \end{aligned}
+$$
+
+
+show 
+$$
+    \frac{\kappa_T}{\kappa_S}=\frac{C_p}{C_V}
+$$
+
+<br>
+
+$$
+    TdS=\big(\dfrac{\partial U}{\partial p}\big)_Vdp+[\big(\dfrac{\partial U}{\partial V}\big)_p+p]dV
+$$
+Let $dS=0$,we have
+$$
+    \begin{aligned}
+        \big(\dfrac{\partial V}{\partial p}\big)_S &= -\frac{\big(\dfrac{\partial U}{\partial p}\big)_V}{\big(\dfrac{\partial U}{\partial V}\big)_p+p}\\
+        \big(\dfrac{\partial U}{\partial p}\big)_V &= \big(\dfrac{\partial U}{\partial T}\big)_V \big(\dfrac{\partial T}{\partial p}\big)_V\\
+         &=C_V \big(\dfrac{\partial T}{\partial p}\big)_V \\
+        \big(\dfrac{\partial U}{\partial V}\big)_p &=\big(\dfrac{\partial U}{\partial T}\big)_p \big(\dfrac{\partial T}{\partial V}\big)_p \\
+        \big(\dfrac{\partial U}{\partial V}\big)_p+p &=\Big[\big(\dfrac{\partial U}{\partial T}\big)_p + p \big(\dfrac{\partial V}{\partial T}\big)_p\Big]\big(\dfrac{\partial T}{\partial V}\big)_p \\
+        &=C_p \big(\dfrac{\partial T}{\partial V}\big)_p\\
+    \end{aligned}
+$$
+Therefore, 
+$$
+    \begin{aligned}
+        \big(\dfrac{\partial V}{\partial p}\big)_S &= -\frac{\big(\dfrac{\partial U}{\partial p}\big)_V}{\big(\dfrac{\partial U}{\partial V}\big)_p+p}\\
+         &=-\frac{C_V}{C_p} \frac{\big(\dfrac{\partial T}{\partial p}\big)_V}{\big(\dfrac{\partial T}{\partial V}\big)_p} \\
+         &=\frac{C_V}{C_p} \big(\dfrac{\partial V}{\partial p}\big)_T\\
+    \end{aligned}
+$$
+移项得证.      

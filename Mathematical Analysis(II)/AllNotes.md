@@ -4,40 +4,40 @@
 <!-- TOC -->
 
 - [数学分析笔记:2019春学期下半学期](#数学分析笔记2019春学期下半学期)
-    - [期中考前空间解析几何知识点整理](#期中考前空间解析几何知识点整理)
-        - [向量](#向量)
-        - [空间平面和直线](#空间平面和直线)
-        - [空间曲面的方程](#空间曲面的方程)
-    - [几类积分的联系](#几类积分的联系)
-        - [高斯公式](#高斯公式)
-        - [斯托克斯公式](#斯托克斯公式)
-    - [第七章 无穷级数](#第七章-无穷级数)
-        - [7.1 数项级数](#71-数项级数)
-            - [7.1.1 常数项级数](#711-常数项级数)
-            - [7.1.2 正项级数($a_n\geq0$)](#712-正项级数a_n\geq0)
-            - [7.1.3 一般级数](#713-一般级数)
-        - [7.2 函数项级数](#72-函数项级数)
-            - [7.2.1 函数列的一致收敛性](#721-函数列的一致收敛性)
-            - [7.2.2 函数项级数](#722-函数项级数)
-        - [7.3 幂级数](#73-幂级数)
-            - [函数的幂级数展开](#函数的幂级数展开)
-        - [7.4 傅里叶级数](#74-傅里叶级数)
-    - [第四章 常微分方程](#第四章-常微分方程)
-        - [4.1 可分离变量的微分方程](#41-可分离变量的微分方程)
-        - [4.4 一阶线性微分方程](#44-一阶线性微分方程)
-        - [4.5 可降阶的高阶微分方程](#45-可降阶的高阶微分方程)
-        - [4.6 高阶线性微分方程](#46-高阶线性微分方程)
-        - [4.7 常系数齐次线性方程](#47-常系数齐次线性方程)
-        - [4.8 常系数非齐次微分方程](#48-常系数非齐次微分方程)
-    - [习题课](#习题课)
-        - [4.25习题课](#425习题课)
-        - [5.10习题课](#510习题课)
-        - [5.24 习题课](#524-习题课)
+    - [1. 期中考前空间解析几何知识点整理](#1-期中考前空间解析几何知识点整理)
+        - [1.1.1. 向量](#111-向量)
+        - [1.1.2. 空间平面和直线](#112-空间平面和直线)
+        - [1.1.3. 空间曲面的方程](#113-空间曲面的方程)
+    - [2. 几类积分的联系](#2-几类积分的联系)
+        - [1.2.1. 高斯公式](#121-高斯公式)
+        - [1.2.2. 斯托克斯公式](#122-斯托克斯公式)
+    - [3. 第七章 无穷级数](#3-第七章-无穷级数)
+        - [1.3.1. 数项级数](#131-数项级数)
+            - [1.3.1.1. 常数项级数](#1311-常数项级数)
+            - [1.3.1.2. 正项级数($a_n\geq0$)](#1312-正项级数a_n\geq0)
+            - [1.3.1.3. 一般级数](#1313-一般级数)
+        - [1.3.2. 函数项级数](#132-函数项级数)
+            - [1.3.2.1. 函数列的一致收敛性](#1321-函数列的一致收敛性)
+            - [1.3.2.2. 函数项级数](#1322-函数项级数)
+        - [1.3.3. 幂级数](#133-幂级数)
+            - [1.3.3.1. 函数的幂级数展开](#1331-函数的幂级数展开)
+        - [1.3.4. 傅里叶级数](#134-傅里叶级数)
+    - [4. 第四章 常微分方程](#4-第四章-常微分方程)
+        - [1.4.1. 可分离变量的微分方程](#141-可分离变量的微分方程)
+        - [1.4.2. 一阶线性微分方程](#142-一阶线性微分方程)
+        - [1.4.3. 可降阶的高阶微分方程](#143-可降阶的高阶微分方程)
+        - [1.4.4. 高阶线性微分方程](#144-高阶线性微分方程)
+        - [1.4.5. 常系数齐次线性方程](#145-常系数齐次线性方程)
+        - [1.4.6. 常系数非齐次微分方程](#146-常系数非齐次微分方程)
+    - [5. 习题课](#5-习题课)
+        - [1.5.1. 习题课](#151-习题课)
+        - [1.5.2. 习题课](#152-习题课)
+        - [1.5.3. 习题课](#153-习题课)
 
 <!-- /TOC -->
 
-## 期中考前空间解析几何知识点整理
-### 向量
+## 1. 期中考前空间解析几何知识点整理
+### 1.1.1. 向量
 - 混合积:$\boldsymbol{a,b,c}$坐标为$(a_1,b_1,c_1),(a_2,b_2,c_2),(a_3,b_3,c_3)$则
 $$\boldsymbol{a}\times \boldsymbol{b}\cdot \boldsymbol{c}=
 \left|\begin{array}{}
@@ -48,7 +48,7 @@ $$\boldsymbol{a}\times \boldsymbol{b}\cdot \boldsymbol{c}=
 
 - 三向量共面:混合积为零
 
-### 空间平面和直线
+### 1.1.2. 空间平面和直线
 - 点到平面的距离: $P_1(x_1,y_1,z_1)$到平面$\pi:Ax+By+Cz+D=0$的距离为:
 $$d=\frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}$$
 - 直线的标准方程:
@@ -66,7 +66,7 @@ $$\left|\begin{array}{}
 - 异面直线间的距离:
 $$d=\frac{|\overrightarrow{M_1M_2}\cdot v_1\times v_2|}{|v_1\times v_2|}$$
 (考虑投影到公垂线段上)
-### 空间曲面的方程
+### 1.1.3. 空间曲面的方程
 - 圆柱面: 半径为$r$,母线方向为$\boldsymbol{v}(l,m,n)$,对称轴$\ell_0$过点$M_0(x_0,y_0,z_0)$,则$M(x,y,z)$在此圆柱面上的充要条件是
 $$\frac{|\overrightarrow{MM_0}\times \boldsymbol{v}|}{|\boldsymbol{v}|}=r$$
 (注意叉乘)
@@ -75,8 +75,8 @@ $$\frac{|\overrightarrow{MM_0}\times \boldsymbol{v}|}{|\boldsymbol{v}|}=r$$
 
 
 
-## 几类积分的联系
-### 高斯公式
+## 2. 几类积分的联系
+### 1.2.1. 高斯公式
 设空间区域$\Omega$由分片光滑的闭曲面$\Sigma$构成,则
 $$
 \iiint\limits_\Omega(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dxdydz=\oiint\limits_\Sigma Pdydz+Qdzdx+Rdxdy\\
@@ -112,7 +112,7 @@ $$
 I=\iiint\limits_\Omega(-z+x^2+y^2)dxdydx=\int_o^{\frac{\pi}{2}}d\theta\int_0^1rdr\int_0^{r^2}(-z+r^2)dz
 $$
 
-### 斯托克斯公式
+### 1.2.2. 斯托克斯公式
 考虑三维空间的曲面$\Sigma$,其边界为$\Gamma$,曲线方向取正向,曲面方向取右手螺旋,我们有
 $$
 \oint_\Gamma P(x,y,z)dx+Q(x,y,z)dy+R(x,y,z)dz=\iint\limits_\Sigma(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})dydz+(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x})dzdx+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})dxdy
@@ -170,9 +170,9 @@ $$
 
 
 
-## 第七章 无穷级数
-### 7.1 数项级数
-#### 7.1.1 常数项级数
+## 3. 第七章 无穷级数
+### 1.3.1. 数项级数
+#### 1.3.1.1. 常数项级数
 - 定义:
   - 给定 $\left\{a_n\right\},a_1+a_2+\dots+a_n+\dots$,或 $\sum\limits_{n=1}^\infty a_n$,简记为 $\sum a_n$
   - 研究问题:收敛/发散
@@ -251,7 +251,7 @@ $$
 
 created on 2019-05-09
 
-#### 7.1.2 正项级数($a_n\geq0$)
+#### 1.3.1.2. 正项级数($a_n\geq0$)
 
 - 性质
   - $S_n$单调,收敛只需证其有界:
@@ -407,7 +407,7 @@ $$
 $$
 用积分判别法
 
-#### 7.1.3 一般级数
+#### 1.3.1.3. 一般级数
 - 交错级数: $\sum\limits_{n=1}^\infty (-1)^{n-1}a_n(a_n>0)$
   - Leibniz: 若 $i):a_n\downarrow ii)a_n\to0(n\to\infty)$,则 $\sum\limits_{n=1}^\infty (-1)^{n-1}a_n$收敛
 
@@ -486,8 +486,8 @@ $$
     \sum\limits_{n=1}^\infty \frac{cosnx}{n}, \sum\limits_{n=1}^\infty \frac{sinnx}{n}
 $$
 
-### 7.2 函数项级数
-#### 7.2.1 函数列的一致收敛性
+### 1.3.2. 函数项级数
+#### 1.3.2.1. 函数列的一致收敛性
 - Intuition: 求极限与求积分,求导数能不能交换次序
 - 设函数列 $f_1(x),f_2(x),\cdots,f_n(x),\cdots,x\in I$. 如果 $\forall x_0\in D, \lim\limits_{n \to\infty}f_n(x_0)=f(x)$, 则称 $\{f_n\}$在$D$上收敛于 $f$. 若 $D$ 包含所有收敛点,则称其为函数列的收敛域
 
@@ -552,7 +552,7 @@ sol4:
 
 1. 用余项 
 
-#### 7.2.2 函数项级数 
+#### 1.3.2.2. 函数项级数 
 - $\sum\limits_{n=1}^\infty u_n(x)$. 研究部分和函数 $S_n(x)= \sum\limits_{k=1}^n u_k(x)$, 构成函数列 $S_1(x),S_2(x),\cdots,S_n(x),\cdots$. $S_n(x_0)$收敛,称 $\sum\limits_{n=1}^\infty u_n(x)$在 $x=x_0$处收敛. 在集合上收敛,收敛域类似定义.若部分和函数一致收敛,则级数 $\sum\limits_{n=1}^\infty u_n(x)$一致收敛.
 - 和函数 $\sum\limits_{n=1}^\infty u_n(x)=S(x)=$ $\lim\limits_{n \to\infty}S_n(x)$  
 
@@ -597,7 +597,7 @@ sol4:
 
 
 
-### 7.3 幂级数
+### 1.3.3. 幂级数
 - $\sum\limits_{n=1}^\infty a_nx^n$
 - $Th(Abel):$
   - $i)$ $\sum\limits_{n=1}^\infty a_nx^n$在 $x=x_0$处收敛,则 $\forall x. |x|<|x_0|,\sum\limits_{n=1}^\infty a_nx^n$收敛
@@ -661,7 +661,7 @@ $$
     \end{aligned}
 $$
 
-#### 函数的幂级数展开
+#### 1.3.3.1. 函数的幂级数展开
 - Taylor级数 $f(x)=f(x_0)+f'(x_0)(x-x_0)+\cdots+f^{(n)}(x_0)\dfrac{(x-x_0)^n}{n!}$
 
 反例: 
@@ -700,7 +700,7 @@ $f(x)=\sum\limits_{n=1}^\infty \dfrac{(-1)^n}{n!}\dfrac{x^{2n+1}}{2n+1}=\sum\lim
 
 比较系数,得 $f^{(2n)}(0)=0$,$f^{(2n+1)}(0)=\dfrac{(-1)^n(2n+1)!}{n!(2n+1)}$
 
-### 7.4 傅里叶级数
+### 1.3.4. 傅里叶级数
 - 若 $f(x)$以 $2\pi$为周期,则在傅里叶系数 $a_n,b_n$下,
 $$
     \begin{aligned}
@@ -731,8 +731,66 @@ $$
   - 除有限第一类间断点外, $f(x)$连续
   - 除有限第一类间断点外, $f'(x)$存在.且若 $x_0$为不连续点,则 $f'_+(x_0),f'_-(x_0)$存在
 
-## 第四章 常微分方程
-### 4.1 可分离变量的微分方程
+eg1: $f(x), 2\pi$为周期,
+$$
+    f(x)=
+    \left\{
+        \begin{array}{rl}
+            0&,\ \ -\pi<x<0\\
+            x&,\ \ 0\leq x\leq \pi
+            
+        \end{array}
+    \right.
+$$
+sol1:
+$$
+    \begin{aligned}
+        a_n &= \frac{1}{\pi}\int_{-\pi}^\pi f(x)cosnxdx\\
+         &= \frac{1}{\pi}\int_{0}^\pi f(x)cosnxdx\\
+         &= \frac{1}{n\pi}[xsinnx]\Big|_0^\pi-\frac{1}{n\pi}\int_0^\pi sinnxdx\\
+         &=\frac{1}{n^2\pi}[cosnx]\Big|_0^\pi \\
+         &=\frac{(-1)^n-1}{n^2\pi}(n\not ={0})\\
+         a_0&=\frac{\pi}{2}\\
+         b_n&=\frac{1}{\pi}\int_{-\pi}^\pi f(x)sinnxdx\\
+         &=\frac{(-1)^{n+1}}{n}\\
+         S(x)&=\left\{
+             \begin{array}{rl}
+            &f(x)\ \ x\in(-\pi,\pi) \\
+            &\dfrac{\pi}{2}\ \ \ \ \ \ \ x=\plusmn \pi
+                 
+             \end{array}
+         \right.
+    \end{aligned}
+$$
+- 若周期不为 $2\pi$,为 $2\ell$ :
+
+设函数 $f(x)$以 $2\ell$为周期,可积,则 
+$$
+    \begin{aligned}
+    f(x)&\sim \frac{a_0}{2}+\sum_{n=1}^\infty (a_ncos\frac{n\pi}{\ell}x+b_nsin\frac{n\pi}{\ell}x)\\
+        a_n &= \frac{1}{\ell}\int_{-\ell}^\ell f(x)cos\frac{n\pi}{\ell}xdx\\
+        b_n &= \frac{1}{\ell}\int_{-\ell}^\ell f(x)sin\frac{n\pi}{\ell}xdx\\
+    \end{aligned}
+$$ 
+eg2:$f(x)$以10为周期
+$$
+f(x)=
+    \left\{
+        \begin{array}{rl}
+            &0\qquad-5\leq x<0\\
+            &3\qquad0\leq x<5
+        \end{array}
+    \right.
+$$
+- 若 $f(x)$为偶函数,则正弦项积分为0.奇函数,余弦积分为0.
+
+$$
+    f(x)\sim \frac{a_0}{2}+\sum\limits_{n=1}^\infty a_ncos\frac{n\pi}{\ell}x
+$$
+
+
+## 4. 第四章 常微分方程
+### 1.4.1. 可分离变量的微分方程
 - 通解: 包括常数的解, 独立常数的个数与微分方程的阶相同.
 - 可分离变量的微分方程(包括变量代换后可分离的)
 
@@ -767,7 +825,7 @@ $$
     y'=\frac{3x+2y+1}{4x+2y+2}
 $$
 线性代换,待定系数
-### 4.4 一阶线性微分方程
+### 1.4.2. 一阶线性微分方程
 - 形式: $y'+P(x)y=Q(x)$
   - $Q(x)\equiv0$ : 齐次; $y=Ce^{\int-P(x)dx}$
   - 非齐次: 常数变易法(想法: $C\to u(x)$, 令其为方程特解)
@@ -818,7 +876,7 @@ $$
     y'+\frac{1}{x}y=alnx\cdot y^2
 $$
 
-### 4.5 可降阶的高阶微分方程
+### 1.4.3. 可降阶的高阶微分方程
 - $y^{(n)}=f(x)$ 求$n$次不定积分
 - $y''=f(x,y')$: 令 $u=f'$
 
@@ -832,14 +890,14 @@ $$
 $$
 - $y''=f(y,y')$ : 令 $y'=P,y''=\dfrac{dP}{dx}=\dfrac{dp}{dy}\dfrac{dy}{dx}=\dfrac{dp}{dy}p,\Rightarrow pp'=f(y,p)$
 
-### 4.6 高阶线性微分方程
+### 1.4.4. 高阶线性微分方程
 $y^{(n)}+a_1(x)y^{(n-1)}+\cdots+a_n(x)y=f(x)$; $f(x)\equiv0$: 齐次
 - 考虑 $y''+P(x)y'+Q(x)y=0$, 若 $y_1=y_1(x), y_2=y_2(x)$是它的解, 则 $y=C_1y_1+C_2y_2$也是它的解. 证明: 利用求导的线性性 $(Cy)''=Cy''$; &emsp; 到 $n$阶也成立
 - 函数组线性相关: $k_1y_1(x)+k_2y_2(x)+\cdots+k_ny_n(x)\equiv0, s.t.\ k_1k_2\cdots k_n\not=0$
 - $Liouville\ Th$: 若$y_1(x)$是 $y''+P(x)y'+Q(x)y=0$的解,则 $y_2(x)=y_1(x)\displaystyle\int\dfrac{exp(-\int p(x)dx)}{y_1^2(x)}dx$
 - 非齐次的情况: $y''+P(x)y'+Q(x)y=f(x)$; &emsp; 若 $y^*=y^*(x)$是它的特解,且 $Y=Y(X)$是对应齐次方程的通解,则 $y=y^*+Y$也是原方程的解. 
 
-### 4.7 常系数齐次线性方程
+### 1.4.5. 常系数齐次线性方程
 - $y''+py'+qy=0$; 试探: $y=e^{rx}\Rightarrow r^2e^{rx}+rpe^{rx}+qr^{rx}=(r^2+pr+q)e^{rx}\equiv0,r^2+pr+q=0$; 讨论其根的分布
   - $i) \Delta>0, r_1,r_2, y=C_1e^{r_1x}+C_2e^{r_2x}$
   - $ii) \Delta=0, y=e^{rx}(C_1+C_2x)$
@@ -861,7 +919,7 @@ sol: 依次求二阶导, $\big(\dfrac{\partial ^2z}{\partial x^2}\big)=f''(u)e^{
   - $i). r$为$k$重实根: $e^{rx}(C_0+C_1x+\cdots+C_{k-1}x^{k-1})$
   - $ii). r$为$k$重复根: $e^{\alpha x}\big[(C_0+C_1x+\cdots+C_{k-1}x^{k-1})cos\beta x+(D_0+D_1x+\cdots+D_{k-1}x^{k-1})sin\beta x\big]$
 
-### 4.8 常系数非齐次微分方程
+### 1.4.6. 常系数非齐次微分方程
 - $y^{(n)}+a_1(x)y^{(n-1)}+\cdots+a_n(x)y=f(x)$. 可做的情形: $f(x)=e^{\lambda x}P_n(x)$或 $f(x)=e^{\alpha x}(R^{(\ell)(x)}cos\omega x+R^{(r)}(x)sin\omega x)$
 - $y^{(n)}+a_1(x)y^{(n-1)}+\cdots+a_n(x)y=e^{\lambda x}P_n(x)$. 
   - 二次的情形:
@@ -897,8 +955,8 @@ $$
 
 
 
-## 习题课
-### 4.25习题课
+## 5. 习题课
+### 1.5.1. 习题课
 - 极限
 <!-- 1. $$\lim\limits_{$\begin{array}
     x \to \infty\\y\to\infty
@@ -963,7 +1021,7 @@ $$
 
 
 
-### 5.10习题课
+### 1.5.2. 习题课
 - 第一型曲线积分 
 - 第二型曲线积分
   - $\displaystyle\int_{\partial \Omega}Pdx+Qdy=\int_{\partial\Omega}(P,Q)\cdot\vec{n}ds$,其中 $\vec{n}$为曲线在 $(x,y)$点的法向量.
@@ -1024,7 +1082,7 @@ $$
   
 用Stokes公式, $I=\displaystyle-2\int_\Omega dy\wedge dz+dz\wedge dx+dx\wedge dy$,用投影.
 
-### 5.24 习题课
+### 1.5.3. 习题课
 - $\dfrac{1}{n(n+1)(n+2)}=\dfrac{1}{2}(\dfrac{1}{n(n+1)}-\dfrac{1}{(n+1)(n+2)})$, 易于消项
 - 注意高尉不等式 $ln(1+x)\geq x-\dfrac{x^2}{4}(0<x<1)$
 - $(lnn)^{lnn}=e^{lnnlnlnn}=n^{lnlnn}$
